@@ -52,7 +52,7 @@
                     <!-- Topbar Brand Logo -->
                     <div class="logo-topbar">
                         <!-- Logo light -->
-                        <a href="index.html" class="logo-light">
+                        <a href="./index.html" class="logo-light">
                             <!-- <span class="logo-lg">
                                 <img src="assets/images/logo.png" alt="logo">
                             </span>
@@ -63,7 +63,7 @@
                         </a>
 
                         <!-- Logo Dark -->
-                        <a href="index.html" class="logo-dark">
+                        <a href="./index.html" class="logo-dark">
                             <!-- <span class="logo-lg">
                                 <img src="assets/images/logo-dark.png" alt="dark logo">
                             </span>
@@ -533,9 +533,7 @@
                                     </div> -->
                                         <a href="./investment.html" class="dropdown-item">Investment Register</a>
                                         <a href="./bookings.html" class="dropdown-item">Booking Master</a>
-                                        <a href="#" class="dropdown-item">Receipt Booking</a>
-                                        <a href="#" class="dropdown-item">Expenses Booking</a>
-                                        <a href="#" class="dropdown-item">Payment Booking</a>
+                                        
                                         <a href="#" class="dropdown-item">Sending Invoices & Ledger</a>
                                         <a href="#" class="dropdown-item">SMS/ Mail/ Whatsapp</a>
                                     </div>
@@ -749,351 +747,8 @@
         <!-- Horizontal Menu Ends. -->
 
         <!-- Page Content -->
-        <div class="container" style="background-color: #fff;" id="srcLoc">
-            <button onclick="flatDetailsFunction()"
-                style="margin-top: 10px; margin-left: 5px; padding: 10px 15px; font-weight: 600; border-radius: 6px; border: none; background: -webkit-linear-gradient(to right, #000428, #004e92); background: linear-gradient(to right,#000428, #004e92); color: #fff; margin-bottom: 5px;">Flat
-                Details <span><i class="ri-arrow-right-double-line"></i></span></button>
-            <form action="">
-                <div id="flatDetails">
+        <div class="container pb-2 pt-1" style="background-color: #fff;" id="srcLoc">
 
-                    <div class="row">
-                        <!-- <div class="col-lg-6 mb-2 d-flex" style="flex-direction: row;">
-                                <label for="" class="form-label">Wing</label>
-                                <input type="text" class="form-control w-50" style="display: flex !important; float: right !important;">
-                            </div> -->
-
-                        <div class="col-lg-6 mb-2">
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Wing</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control ">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="col-lg-6 mb-2">
-                                <label for="" class="form-label">Owned</label>
-                                <select name="" id="" class="form-control">
-                                    <option value="Owned">Owned</option>
-                                    <option value="Occupied by Tenant">Occupied by Tenant</option>
-                                    <option value="Vacant">Vacant</option>
-                                </select>
-                            </div> -->
-
-                        <div class="col-lg-6 mb-2">
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Owned</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <select name="" id="" class="form-control">
-                                        <option value="Owned">Owned</option>
-                                        <option value="Occupied by Tenant">Occupied by Tenant</option>
-                                        <option value="Vacant">Vacant</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Flat Number</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Reason for cessation</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <textarea name="" id="" class="form-control" cols="30" rows="1"></textarea>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Display Wing & Flat Number</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Active From</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="date" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-                            <!-- <label for="" class="form-label">Unit Type</label>
-                                <input type="text" class="form-control"> -->
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Unit Type</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Deactive From</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="date" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Parent Type</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-                            <!-- <label for="" class="form-label">Registration Fees</label>
-                                <input type="text" class="form-control"> -->
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Registration Fees</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Floor</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-                            <!-- <label for="" class="form-label">Enterance Fees</label>
-                                <input type="text" class="form-control"> -->
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Enterance Fees</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-                            <!-- <label for="" class="form-label">Unit Area</label>
-                                <input type="text" class="form-control"> -->
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Unit Area</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-                            <!-- <label for="" class="form-label">Enterance Fees Date</label>
-                                <input type="date" class="form-control"> -->
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Enterance Fees Date</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="date" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Unit of Measure</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <select name="" class="form-control" id="">
-                                        <option value="Sqft">Sqft</option>
-                                        <option value="Sqmts">Sqmts</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Water Connection Number</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Property Tax Number</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Gas Connection Number</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Electricity Connection Number</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mb-2">
-
-                            <div class="row" style="display: flex; align-items: center;">
-                                <div class="col-lg-6">
-                                    <label for="" class="form-label">Is having Pet</label>
-                                </div>
-                                <div class="col-lg-6">
-                                    <!-- <input type="number" class="form-control">   -->
-                                    <select name="" id="petConf" class="form-control" onchange="toggleTextAreaa()">
-                                        <option value="no">NO</option>
-                                        <option value="yes">YES</option>
-                                    </select>
-                                    <!-- <div class="textAreaContainers" style="display: none;">
-                                            <label for="textArea" class="form-label">Reason</label>
-                                            <textarea name="" id="textArea" cols="30" class="form-control" rows="2"></textarea>
-                                        </div>
-                                        
-
-                                        <script>
-                                            function toggleTextAreaa() {
-                                            var petConf = document.getElementById("petConf");
-                                            var textAreaContainers = document.getElementById("textAreaContainers");
-
-                                            if (petConf.value == "yes") {
-                                                textAreaContainers.style.display = "block";
-                                            } else {
-                                                textAreaContainers.style.display = "none";
-                                            }
-                                            }
-                                        </script> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <input type="submit" class="btn btn-success" value="Submit" name="" id=""> -->
-                    <button type="submit" class="btn btn-info" onclick="scrollWin()">
-                        Save and Next
-                    </button>
-                </div>
-            </form>
-            <hr class="ms-auto me-auto m-0 p-0 mt-2" style="width: 99%;">
-
-            <script>
-                function scrollWin() {
-                    event.preventDefault();
-                    var y = document.getElementById("flatDetails");
-                    if (y.style.display === "none") {
-                        y.style.display = "block";
-                    } else {
-                        y.style.display = "none";
-                    }
-
-                    // document.getElementById("srcLoc").scrollIntoView();
-                    window.scrollTo(0, 0);
-                }
-
-                function flatDetailsFunction() {
-                    var x = document.getElementById("flatDetails");
-                    if (x.style.display === "none") {
-                        x.style.display = "block";
-                    } else {
-                        x.style.display = "none";
-                    }
-                }
-            </script>
-
-            <!-- <ul class="nav nav-pills m-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="pills-member-details-tab" data-bs-toggle="pill" data-bs-target="#pills-member-details" type="button" role="tab" aria-controls="pills-member-details" aria-selected="true">Member Details</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-shares-details-tab" data-bs-toggle="pill" data-bs-target="#pills-shares-details" type="button" role="tab" aria-controls="pills-shares-details" aria-selected="true">Shares Details</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-loan-details-tab" data-bs-toggle="pill" data-bs-target="#pills-loan-details" type="button" role="tab" aria-controls="pills-loan-details" aria-selected="false">Home Loan Details</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-staff-details-tab" data-bs-toggle="pill" data-bs-target="#pills-staff-details" type="button" role="tab" aria-controls="pills-staff-details" aria-selected="false">Staff Details</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-gst-details-tab" data-bs-toggle="pill" data-bs-target="#pills-gst-details" type="button" role="tab" aria-controls="pills-gst-details" aria-selected="false">GST Details</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-vehicle-details-tab" data-bs-toggle="pill" data-bs-target="#pills-vehicle-details" type="button" role="tab" aria-controls="pills-vehicle-details" aria-selected="false">Vehicle Details</button>
-                </li>
-                
-            </ul> -->
             <ul class="nav nav-tabs mt-2" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link mem-mast active" id="member-details-tab" data-bs-toggle="tab"
@@ -2116,7 +1771,7 @@
             </script>
 
 
-            <div class="ht" style="height: 10vh;"></div>
+            <!-- <div class="ht" style="height: 10vh;"></div> -->
         </div>
 
         <!-- Vendor js -->

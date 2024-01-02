@@ -52,7 +52,7 @@
                 <!-- Topbar Brand Logo -->
                 <div class="logo-topbar">
                     <!-- Logo light -->
-                    <a href="index.html" class="logo-light">
+                    <a href="./index.html" class="logo-light">
                         <!-- <span class="logo-lg">
                                 <img src="assets/images/logo.png" alt="logo">
                             </span>
@@ -63,7 +63,7 @@
                     </a>
 
                     <!-- Logo Dark -->
-                    <a href="index.html" class="logo-dark">
+                    <a href="./index.html" class="logo-dark">
                         <!-- <span class="logo-lg">
                                 <img src="assets/images/logo-dark.png" alt="dark logo">
                             </span>
@@ -533,10 +533,7 @@
                                     </div> -->
                                     <a href="./investment.html" class="dropdown-item">Investment Register</a>
                                     <a href="./bookings.html" class="dropdown-item">Booking Master</a>
-                                    <a href="#" class="dropdown-item">Invoice Creation</a>
-                                    <a href="#" class="dropdown-item">Receipt Booking</a>
-                                    <a href="#" class="dropdown-item">Expenses Booking</a>
-                                    <a href="#" class="dropdown-item">Payment Booking</a>
+                                    
                                     <a href="#" class="dropdown-item">Sending Invoices & Ledger</a>
                                     <a href="#" class="dropdown-item">SMS/ Mail/ Whatsapp</a>
                                 </div>
@@ -826,32 +823,8 @@
                     </div>
                     <div id="voucherNumber">
                         <div class="voucherNumberContainer row">
-                            <hr>
-                            <div class="col-lg-6 mb-2">
-                                <div class="row" style="display: flex; align-items: center;">
-                                    <div class="col-lg-6">
-                                        <label for="touchspin" class="form-label">Number Start From</label>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <input type="number" class="form-control" name="" id="">
-                                        <!-- <input type="text" name="touchspin" class="form-control input-group" id="touchspin"> -->
-                                    </div>
-                                    <!--<script>
-                                        $(document).ready(function() {
-                                            $("input[name='touchspin']").TouchSpin({
-                                                min: -1000,
-                                                max: 1000,
-                                                step: 50,
-                                                maxboostedstep: 100000,
-                                                prefix: '$',
-                                                buttondown_class: "btn btn-link",
-                                                buttonup_class: "btn btn-link",
-                                                initval: 150,
-                                            });
-                                        });
-                                    </script> -->
-                                </div>
-                            </div>
+                            <!-- <hr> -->
+                            
 
                             <div class="col-lg-6 mb-2">
                                 <div class="row" style="display: flex; align-items: center;">
@@ -889,8 +862,8 @@
                     </div>
 
                 </div>
-                <button type="button" id="addVoucherSettings" class="btn btn-soft-primary mb-2 mt-2">Add Voucher Type
-                    Settings</button>
+                <!-- <button type="button" id="addVoucherSettings" class="btn btn-soft-primary mb-2 mt-2">Add Voucher Type
+                    Settings</button> -->
                 <input type="submit" value="Submit" class="btn btn-success mb-2 ms-2 mt-2" id="voucherTypeAlert">
             </form>
             <script>
@@ -1022,7 +995,7 @@
             <div class="modal fade" id="editVoucherType" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable ">
-                    <div class="modal-content" style="overflow-y: scroll;">
+                    <div class="modal-content">
 
                         <form action="">
                             <div class="modal-header text-center bg-success text-white">
@@ -1084,8 +1057,8 @@
                                     </div>
                                     <div id="voucherNumberModal">
                                         <div class="voucherNumberContainerModal row">
-                                            <hr>
-                                            <div class="col-lg-6 mb-2">
+                                            <!-- <hr> -->
+                                            <!-- <div class="col-lg-6 mb-2">
                                                 <div class="row" style="display: flex; align-items: center;">
                                                     <div class="col-lg-6">
                                                         <label for="" class="form-label">Number Start From</label>
@@ -1094,7 +1067,7 @@
                                                         <input type="number" class="form-control" name="" id="">
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
 
                                             <div class="col-lg-6 mb-2">
                                                 <div class="row" style="display: flex; align-items: center;">
@@ -1139,9 +1112,9 @@
                                     id="voucherTypeAlert"> -->
 
                             <div class="modal-footer">
-                                <button type="button" id="addVoucherSettingsModal"
+                                <!-- <button type="button" id="addVoucherSettingsModal"
                                     class="btn btn-soft-primary mb-2 mt-2">Add Voucher Type
-                                    Settings</button>
+                                    Settings</button> -->
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 <button type="submit" data-bs-dismiss="modal" class="btn btn-primary" id="voucherTypeUpdateAlert">Update</button>
                             </div>
