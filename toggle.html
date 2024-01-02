@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left,
+.right {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div1{
+    display:none;
+}
+.div2{
+    display:none;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+          <input type="text" placeholder="Input Field">
+        </div>
+        <div class="center">
+          <label>
+            <input type="radio" name="options" value="option1" checked>
+            Option 1
+          </label>
+          <label>
+            <input type="radio" name="options" value="option2">
+            Option 2
+          </label>
+        </div>
+        <div class="right">
+          <div class="div1" style="display:none;">
+            <label for="">Div1 ka maal</label>
+            <input type="text" placeholder="Input Field">
+          </div>
+          <div class="div2" style="display:none;">
+            <label for="">div2 ka maal</label>
+            <input type="text" placeholder="Input Field">
+          </div>
+        </div>
+      </div>
+     
+      <button type="button" id="addMore">Add more</button>
+     
+      <script>
+        function setupEventListeners(container) {
+          const radioButtons = container.querySelectorAll('input[type="radio"][name="options"]');
+          radioButtons.forEach(function(radio)
+ {
+            radio.addEventListener('change', function() {
+              const div1 = container.querySelector('.div1');
+              const div2 = container.querySelector('.div2');
+             
+              if (this.value === 'option1') {
+                div1.style.display = 'block';
+                div2.style.display = 'none';
+              } else if (this.value === 'option2') {
+                div1.style.display = 'none';
+                div2.style.display = 'block';
+              }
+            });
+          });
+        }
+     
+        document.getElementById('addMore').addEventListener('click', function() {
+          const containerToClone = document.querySelector('.container');
+          const clone = containerToClone.cloneNode(true);
+          document.body.appendChild(clone);
+          setupEventListeners(clone);
+        });
+     
+        setupEventListeners(document.querySelector('.container'));
+      </script>
+     
+     
+     
+     
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form>
+        <label for="inputCount">Enter the number of input fields:</label>
+        <input type="number" id="inputCount" min="1" value="1">
+        <button id="createInputs">Create Input Fields</button>
+    
+        <div id="inputContainers">
+        </div>
+        
+        <div id="textareaContainer">
+        </div>
+    </form>
+    <button type="submit">submit</button>
+    <script>
+        document.getElementById("createInputs").addEventListener("click", function (e) {
+            e.preventDefault()
+            const inputCount = parseInt(document.getElementById("inputCount").value);
+    
+            if (!isNaN(inputCount) && inputCount > 0) {
+                const inputContainers = document.getElementById("inputContainers");
+    
+                // Create a new container for this set of input fields
+                const inputContainer = document.createElement("div");
+                inputContainers.appendChild(inputContainer);
+    
+                for (let i = 0; i < inputCount; i++) {
+                    const input = document.createElement("input");
+                    input.type = "text";
+                    input.placeholder = `Input ${i + 1}`;
+                    inputContainer.appendChild(input);
+                }
+            } else {
+                alert("Please enter a valid number greater than zero.");
+            }
+
+            const textareaContainer = document.getElementById("textareaContainer");
+            const newTextArea = document.createElement("div");
+            textareaContainer.appendChild(newTextArea);
+            
+
+            for (let i = 0; i < inputCount; i++) {
+            const textarea = document.createElement("textarea");
+            textarea.name = "textarea" + (i + 1); // Optional: Give each textarea a unique name
+            textareaContainer.appendChild(textarea);
+           }
+        });
+    </script>
+
+
+<label for="dropdown">Select Yes/No:</label>
+<select id="dropdown" onchange="toggleTextArea()">
+  <option value="no">No</option>
+  <option value="yes">Yes</option>
+</select>
+
+<div id="textAreaContainer" style="display: none;">
+  <label for="textArea">Additional Information:</label>
+  <textarea id="textArea" rows="4" cols="50"></textarea>
+</div>
+
+<script>
+  function toggleTextArea() {
+    var dropdown = document.getElementById("dropdown");
+    var textAreaContainer = document.getElementById("textAreaContainer");
+
+    if (dropdown.value == "yes") {
+      textAreaContainer.style.display = "block";
+    } else {
+      textAreaContainer.style.display = "none";
+    }
+  }
+</script> -->
+
+<div id="forms-container">
+    <!-- Initial form -->
+    <div class="form-container">
+      <form>
+        <!-- Your form fields go here -->
+        <label for="field1">Field 1:</label>
+        <input type="text" id="field1" name="field1">
+
+        <label for="field2">Field 2:</label>
+        <input type="text" id="field2" name="field2">
+      </form>
+    </div>
+  </div>
+
+  <button onclick="duplicateForm()">Duplicate Form</button>
+
+  <script>
+    function duplicateForm() {
+      // Clone the first form
+      var originalForm = document.querySelector('.form-container');
+      var clonedForm = originalForm.cloneNode(true);
+
+      // Clear input values in the cloned form (optional)
+      var inputs = clonedForm.querySelectorAll('input');
+      inputs.forEach(function(input) {
+        input.value = '';
+      });
+
+      // Append the cloned form to the forms container
+      document.getElementById('forms-container').appendChild(clonedForm);
+    }
+  </script>
+
+  <br><br><br><br>
+
+  <label for="textInput">Type something:</label>
+  <input type="text" id="textInput" oninput="showAttachmentField()">
+
+  <div id="attachmentField" style="display: none;">
+    <label for="attachment">Attachment:</label>
+    <input type="file" id="attachment" name="attachment">
+  </div>
+
+  <script>
+    function showAttachmentField() {
+      var textInput = document.getElementById("textInput");
+      var attachmentField = document.getElementById("attachmentField");
+
+      // Check if the input field has any value
+      if (textInput.value.trim() !== "") {
+        attachmentField.style.display = "block";
+      } else {
+        attachmentField.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
+

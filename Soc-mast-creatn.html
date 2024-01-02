@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="topnav" data-topbar-color="dark" data-menu-color="light">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Horizontal Layout | Society Managements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
+    <meta content="Techzaa" name="author" />
+
+    <!-- sweetalert -->
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Daterangepicker css -->
+    <link rel="stylesheet" href="assets/vendor/daterangepicker/daterangepicker.css">
+
+    <!-- Vector Map css -->
+    <link rel="stylesheet" href="assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css">
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/config.js"></script>
+
+    <!-- App css -->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
+
+    <!-- Icons css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Extra CSS -->
+    <link rel="stylesheet" href="./assets/css/extra.css">
+</head>
+
+<body>
+    <!-- Begin page -->
+    <div class="wrapper">
+
+        <!-- ========== Topbar Start ========== -->
+        <div class="navbar-custom">
+            <div class="topbar container-fluid">
+                <div class="d-flex align-items-center gap-1">
+
+                    <!-- Topbar Brand Logo -->
+                    <div class="logo-topbar">
+                        <!-- Logo light -->
+                        <a href="index.html" class="logo-light">
+                            <!-- <span class="logo-lg">
+                                <img src="assets/images/logo.png" alt="logo">
+                            </span>
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-sm.png" alt="small logo">
+                            </span> -->
+                            <h4>Society<br>Management</h4>
+                        </a>
+
+                        <!-- Logo Dark -->
+                        <a href="index.html" class="logo-dark">
+                            <!-- <span class="logo-lg">
+                                <img src="assets/images/logo-dark.png" alt="dark logo">
+                            </span>
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-sm.png" alt="small logo">
+                            </span> -->
+                            <h4>Society<br>Management</h4>
+                        </a>
+                    </div>
+
+                    <!-- Sidebar Menu Toggle Button -->
+                    <button class="button-toggle-menu">
+                        <i class="ri-menu-line"></i>
+                    </button>
+
+                    <!-- Horizontal Menu Toggle Button -->
+                    <button class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+
+                    <!-- Topbar Search Form -->
+                    <!-- <div class="app-search d-none d-lg-block">
+                        <form>
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="Search...">
+                                <span class="ri-search-line search-icon text-muted"></span>
+                            </div>
+                        </form>
+                    </div> -->
+                </div>
+
+                <ul class="topbar-menu d-flex align-items-center gap-3">
+                    <!-- <li class="dropdown d-lg-none">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <i class="ri-search-line fs-22"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
+                            <form class="p-3">
+                                <input type="search" class="form-control" placeholder="Search ..."
+                                    aria-label="Recipient's username">
+                            </form>
+                        </div>
+                    </li> -->
+
+                    <!-- <li class="dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12">
+                            <span class="align-middle d-none d-lg-inline-block">English</span> <i
+                                class="ri-arrow-down-s-line d-none d-sm-inline-block align-middle"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated"> -->
+
+                    <!-- item-->
+                    <!-- <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span
+                                    class="align-middle">German</span>
+                            </a> -->
+
+                    <!-- item-->
+                    <!-- <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span
+                                    class="align-middle">Italian</span>
+                            </a> -->
+
+                    <!-- item-->
+                    <!-- <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span
+                                    class="align-middle">Spanish</span>
+                            </a> -->
+
+                    <!-- item-->
+                    <!-- <a href="javascript:void(0);" class="dropdown-item">
+                                <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span
+                                    class="align-middle">Russian</span>
+                            </a> -->
+
+                    <!-- </div>
+                    </li> -->
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <i class="ri-mail-line fs-22"></i>
+                            <span class="noti-icon-badge badge text-bg-purple">4</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg py-0">
+                            <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0 fs-16 fw-semibold"> Messages</h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="javascript: void(0);" class="text-dark text-decoration-underline">
+                                            <small>Clear All</small>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="max-height: 300px;" data-simplebar>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);"
+                                    class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon">
+                                                    <img src="assets/images/users/avatar-1.jpg"
+                                                        class="img-fluid rounded-circle" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold fs-14">Cristina Pride <small
+                                                        class="fw-normal text-muted float-end ms-1">1 day ago</small>
+                                                </h5>
+                                                <small class="noti-item-subtitle text-muted">Hi, How are you? What about
+                                                    our
+                                                    next meeting</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- item-->
+                                <!-- <a href="javascript:void(0);"
+                                    class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon">
+                                                    <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle"
+                                                        alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold fs-14">Sam Garret <small
+                                                        class="fw-normal text-muted float-end ms-1">2 day ago</small></h5>
+                                                <small class="noti-item-subtitle text-muted">Yeah everything is fine</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a> -->
+
+                                <!-- item-->
+                                <!-- <a href="javascript:void(0);"
+                                    class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon">
+                                    <a href="javascript:void(0);"
+                                    class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon">
+                                                    <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle"
+                                                        alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold fs-14">Sherry Marshall <small
+                                                        class="fw-normal text-muted float-end ms-1">3 day ago</small></h5>
+                                                <small class="noti-item-subtitle text-muted">Hi, How are you? What about our
+                                                    next meeting</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                <img src="assets/images/users/avatar-3.jpg" class="img-fluid rounded-circle"
+                                                        alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold fs-14">Karen Robinson <small
+                                                        class="fw-normal text-muted float-end ms-1">2 day ago</small></h5>
+                                                <small class="noti-item-subtitle text-muted">Wow that's great</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a> -->
+
+                                <!-- item-->
+
+                                <!-- item-->
+                                <!-- <a href="javascript:void(0);"
+                                    class="dropdown-item p-0 notify-item read-noti card m-0 shadow-none">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon">
+                                                    <img src="assets/images/users/avatar-5.jpg" class="img-fluid rounded-circle"
+                                                        alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold fs-14">Shawn Millard <small
+                                                        class="fw-normal text-muted float-end ms-1">4 day ago</small></h5>
+                                                <small class="noti-item-subtitle text-muted">Yeah everything is fine</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a> -->
+                            </div>
+
+                            <!-- All-->
+                            <a href="javascript:void(0);"
+                                class="dropdown-item text-center text-primary text-decoration-underline fw-bold notify-item border-top border-light py-2">
+                                View All
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <!-- <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <i class="ri-notification-3-line fs-22"></i>
+                            <span class="noti-icon-badge badge text-bg-pink">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg py-0">
+                            <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0 fs-16 fw-semibold"> Notification</h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="javascript: void(0);" class="text-dark text-decoration-underline">
+                                            <small>Clear All</small>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="max-height: 300px;" data-simplebar>-->
+                    <!-- item-->
+                    <!--<a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-primary-subtle">
+                                        <i class="mdi mdi-comment-account-outline text-primary"></i>
+                                    </div>
+                                    <p class="notify-details">Caleb Flakelar commented on Admin
+                                        <small class="noti-time">1 min ago</small>
+                                    </p>
+                                </a>-->
+
+                    <!-- item-->
+                    <!--<a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-warning-subtle">
+                                        <i class="mdi mdi-account-plus text-warning"></i>
+                                    </div>
+                                    <p class="notify-details">New user registered.
+                                        <small class="noti-time">5 hours ago</small>
+                                    </p>
+                                </a>-->
+
+                    <!-- item-->
+                    <!--<a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-danger-subtle">
+                                        <i class="mdi mdi-heart text-danger"></i>
+                                    </div>
+                                    <p class="notify-details">Carlos Crouch liked
+                                        <small class="noti-time">3 days ago</small>
+                                    </p>
+                                </a>-->
+
+                    <!-- item-->
+                    <!--<a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-pink-subtle">
+                                        <i class="mdi mdi-comment-account-outline text-pink"></i>
+                                    </div>
+                                    <p class="notify-details">Caleb Flakelar commented on Admi
+                                        <small class="noti-time">4 days ago</small>
+                                    </p>
+                                </a>-->
+
+                    <!-- item-->
+                    <!--<a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-purple-subtle">
+                                        <i class="mdi mdi-account-plus text-purple"></i>
+                                    </div>
+                                    <p class="notify-details">New user registered.
+                                        <small class="noti-time">7 days ago</small>
+                                    </p>
+                                </a>-->
+
+                    <!-- item-->
+                    <!--<a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-success-subtle">
+                                        <i class="mdi mdi-heart text-success"></i>
+                                    </div>
+                                    <p class="notify-details">Carlos Crouch liked <b>Admin</b>.
+                                        <small class="noti-time">Carlos Crouch liked</small>
+                                    </p>
+                                </a>-->
+                    <!--</div>-->
+
+                    <!-- All-->
+                    <!--<a href="javascript:void(0);"
+                                class="dropdown-item text-center text-primary text-decoration-underline fw-bold notify-item border-top border-light py-2">
+                                View All
+                            </a>-->
+
+                    <!--</div>
+                    </li> -->
+
+                    <!-- <li class="d-none d-sm-inline-block">
+                        <a class="nav-link" data-bs-toggle="offcanvas" href="#theme-settings-offcanvas">
+                            <i class="ri-settings-3-line fs-22"></i>
+                        </a>
+                    </li> -->
+
+                    <li class="d-none d-sm-inline-block">
+                        <div class="nav-link" id="light-dark-mode">
+                            <i class="ri-moon-line fs-22"></i>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none nav-user" data-bs-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="false" aria-expanded="false">
+                            <span class="account-user-avatar">
+                                <img src="assets/images/users/avatar-1.jpg" alt="user-image" width="32"
+                                    class="rounded-circle">
+                            </span>
+                            <!-- <span class="d-lg-block d-none">
+                                <h5 class="my-0 fw-normal">Thomson <i
+                                        class="ri-arrow-down-s-line d-none d-sm-inline-block align-middle"></i></h5>
+                            </span> -->
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
+                            <!-- item-->
+                            <div class=" dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome !</h6>
+                            </div>
+
+                            <!-- item-->
+                            <a href="pages-profile.html" class="dropdown-item">
+                                <i class="ri-account-circle-line fs-18 align-middle me-1"></i>
+                                <span>My Account</span>
+                            </a>
+
+                            <!-- item-->
+                            <!-- <a href="pages-profile.html" class="dropdown-item">
+                                <i class="ri-settings-4-line fs-18 align-middle me-1"></i>
+                                <span>Settings</span>
+                            </a> -->
+
+                            <!-- item-->
+                            <!-- <a href="pages-faq.html" class="dropdown-item">
+                                <i class="ri-customer-service-2-line fs-18 align-middle me-1"></i>
+                                <span>Support</span>
+                            </a> -->
+
+                            <!-- item-->
+                            <!-- <a href="auth-lock-screen.html" class="dropdown-item">
+                                <i class="ri-lock-password-line fs-18 align-middle me-1"></i>
+                                <span>Lock Screen</span>
+                            </a> -->
+
+                            <!-- item-->
+                            <a href="auth-logout.html" class="dropdown-item">
+                                <i class="ri-logout-box-line fs-18 align-middle me-1"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- ========== Topbar End ========== -->
+
+        <!-- ========== Horizontal Menu Start ========== -->
+        <div class="topnav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="collapse navbar-collapse" id="topnav-menu-content">
+                        <ul class="navbar-nav">
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="layouts-horizontal.html"
+                                    id="topnav-dashboards" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ri-dashboard-3-line"></i>Dashboard
+                                </a>
+                            </li> -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none active" href="#" id="topnav-apps"
+                                    role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <!-- <i class="ri-pages-line"></i> -->
+                                    Masters Creation<div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-apps">
+                                    <div class="dropdown">
+                                        <!-- <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-auth"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Society Master <br> Creation<div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-auth">
+                                            <a href="auth-login.html" class="dropdown-item">Login</a>
+                                            <a href="auth-register.html" class="dropdown-item">Register</a>
+                                            <a href="auth-logout.html" class="dropdown-item">Logout</a>
+                                            <a href="auth-forgotpw.html" class="dropdown-item">Forgot Password</a>
+                                            <a href="auth-lock-screen.html" class="dropdown-item">Lock Screen</a>
+                                        </div>
+                                    </div> -->
+                                        <!-- <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-error"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Error <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-error">
+                                            <a href="error-404.html" class="dropdown-item">Error 404</a>
+                                            <a href="error-404-alt.html" class="dropdown-item">Error 404-alt</a>
+                                            <a href="error-500.html" class="dropdown-item">Error 500</a>
+                                        </div>
+                                    </div> -->
+                                        <a href="Soc-mast-creatn.html" class="dropdown-item active">Society Master <br>
+                                            Creation</a>
+                                        <a href="./member-master.html" class="dropdown-item">Members Master</a>
+                                        <a href="./tenant-master.html" class="dropdown-item">Tenant Master</a>
+                                        <a href="./household-master.html" class="dropdown-item">House Help Master</a>
+                                        <a href="./charge-master.html" class="dropdown-item">Income | Expense Ledger
+                                            <br>Creation</a>
+                                        <!-- <a href="#" class="dropdown-item">Expense Master</a> -->
+                                        <a href="./Asset-creation.html" class="dropdown-item">Asset | Liability Ledger
+                                            <br>Creation</a>
+
+                                        <!-- <a href="#" class="dropdown-item">Vehicle Master</a> -->
+                                    </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <!-- <i class="ri-pages-line"></i> -->
+                                    Accounts<div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-apps">
+                                    <div class="dropdown">
+                                        <!-- <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-auth"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Society Master <br> Creation<div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-auth">
+                                            <a href="auth-login.html" class="dropdown-item">Login</a>
+                                            <a href="auth-register.html" class="dropdown-item">Register</a>
+                                            <a href="auth-logout.html" class="dropdown-item">Logout</a>
+                                            <a href="auth-forgotpw.html" class="dropdown-item">Forgot Password</a>
+                                            <a href="auth-lock-screen.html" class="dropdown-item">Lock Screen</a>
+                                        </div>
+                                    </div> -->
+                                        <!-- <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-error"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Error <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-error">
+                                            <a href="error-404.html" class="dropdown-item">Error 404</a>
+                                            <a href="error-404-alt.html" class="dropdown-item">Error 404-alt</a>
+                                            <a href="error-500.html" class="dropdown-item">Error 500</a>
+                                        </div>
+                                    </div> -->
+                                        <a href="./investment.html" class="dropdown-item">Investment Register</a>
+                                        <a href="./bookings.html" class="dropdown-item">Booking Master</a> <a href="#"
+                                            class="dropdown-item">Receipt Booking</a>
+                                        <a href="#" class="dropdown-item">Expenses Booking</a>
+                                        <a href="#" class="dropdown-item">Payment Booking</a>
+                                        <a href="#" class="dropdown-item">Sending Invoices & Ledger</a>
+                                        <a href="#" class="dropdown-item">SMS/ Mail/ Whatsapp</a>
+                                    </div>
+                            </li>
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layouts" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ri-layout-line"></i>Layouts <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-layouts">
+                                    <a href="layouts-horizontal.html" class="dropdown-item" target="_blank">Horizontal</a>
+                                    <a href="layouts-light-sidebar.html" class="dropdown-item" target="_blank">Light Sidebar</a>
+                                    <a href="layouts-sm-sidebar.html" class="dropdown-item" target="_blank">Small Sidebar</a>
+                                    <a href="layouts-collapsed-sidebar.html" class="dropdown-item" target="_blank">Collapsed Sidebar</a>
+                                    <a href="layouts-unsticky-layout.html" class="dropdown-item" target="_blank">Unsticky Layout</a>
+                                    <a href="layouts-boxed.html" class="dropdown-item" target="_blank">Boxed Layout</a>
+                                </div>
+                            </li> -->
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <!-- <i class="ri-pages-line"></i> -->
+                                    Meeting & Election<div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-apps">
+                                    <div class="dropdown">
+                                        <!-- <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-auth"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Society Master <br> Creation<div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-auth">
+                                            <a href="auth-login.html" class="dropdown-item">Login</a>
+                                            <a href="auth-register.html" class="dropdown-item">Register</a>
+                                            <a href="auth-logout.html" class="dropdown-item">Logout</a>
+                                            <a href="auth-forgotpw.html" class="dropdown-item">Forgot Password</a>
+                                            <a href="auth-lock-screen.html" class="dropdown-item">Lock Screen</a>
+                                        </div>
+                                    </div> -->
+                                        <!-- <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-error"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Error <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-error">
+                                            <a href="error-404.html" class="dropdown-item">Error 404</a>
+                                            <a href="error-404-alt.html" class="dropdown-item">Error 404-alt</a>
+                                            <a href="error-500.html" class="dropdown-item">Error 500</a>
+                                        </div>
+                                    </div> -->
+                                        <a href="#" class="dropdown-item">AGM</a>
+                                        <a href="#" class="dropdown-item">SGM</a>
+                                        <a href="#" class="dropdown-item">Extra Ordinary General <br> Meeting</a>
+                                        <a href="#" class="dropdown-item">Managing Committee <br> Meeting</a>
+                                        <a href="#" class="dropdown-item">Election</a>
+                                        <a href="#" class="dropdown-item">Managing Committee</a>
+                                        <a href="#" class="dropdown-item">Office Bearer</a>
+                                    </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <!-- <i class="ri-pages-line"></i> -->
+                                    Raise Request<div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-apps">
+                                    <div class="dropdown">
+                                        <!-- <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-auth"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Society Master <br> Creation<div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-auth">
+                                            <a href="auth-login.html" class="dropdown-item">Login</a>
+                                            <a href="auth-register.html" class="dropdown-item">Register</a>
+                                            <a href="auth-logout.html" class="dropdown-item">Logout</a>
+                                            <a href="auth-forgotpw.html" class="dropdown-item">Forgot Password</a>
+                                            <a href="auth-lock-screen.html" class="dropdown-item">Lock Screen</a>
+                                        </div>
+                                    </div> -->
+                                        <!-- <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-error"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Error <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-error">
+                                            <a href="error-404.html" class="dropdown-item">Error 404</a>
+                                            <a href="error-404-alt.html" class="dropdown-item">Error 404-alt</a>
+                                            <a href="error-500.html" class="dropdown-item">Error 500</a>
+                                        </div>
+                                    </div> -->
+                                        <a href="#" class="dropdown-item">NOC</a>
+                                        <a href="#" class="dropdown-item">Complain</a>
+                                        <a href="#" class="dropdown-item">Change in Member Info</a>
+                                        <a href="#" class="dropdown-item">Suggestion</a>
+                                        <a href="#" class="dropdown-item">Flat Repair Request</a>
+                                    </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <!-- <i class="ri-pages-line"></i> -->
+                                    Gate Management<div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-apps">
+                                    <div class="dropdown">
+                                        <!-- <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-auth"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Society Master <br> Creation<div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-auth">
+                                            <a href="auth-login.html" class="dropdown-item">Login</a>
+                                            <a href="auth-register.html" class="dropdown-item">Register</a>
+                                            <a href="auth-logout.html" class="dropdown-item">Logout</a>
+                                            <a href="auth-forgotpw.html" class="dropdown-item">Forgot Password</a>
+                                            <a href="auth-lock-screen.html" class="dropdown-item">Lock Screen</a>
+                                        </div>
+                                    </div> -->
+                                        <!-- <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-error"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Error <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-error">
+                                            <a href="error-404.html" class="dropdown-item">Error 404</a>
+                                            <a href="error-404-alt.html" class="dropdown-item">Error 404-alt</a>
+                                            <a href="error-500.html" class="dropdown-item">Error 500</a>
+                                        </div>
+                                    </div> -->
+                                        <a href="#" class="dropdown-item">Visitors Record</a>
+                                        <a href="#" class="dropdown-item">Payment Gateway</a>
+                                    </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <!-- <i class="ri-pages-line"></i> -->
+                                    Empanelment of Contractor<div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-apps">
+                                    <div class="dropdown">
+                                        <!-- <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-auth"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Society Master <br> Creation<div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-auth">
+                                            <a href="auth-login.html" class="dropdown-item">Login</a>
+                                            <a href="auth-register.html" class="dropdown-item">Register</a>
+                                            <a href="auth-logout.html" class="dropdown-item">Logout</a>
+                                            <a href="auth-forgotpw.html" class="dropdown-item">Forgot Password</a>
+                                            <a href="auth-lock-screen.html" class="dropdown-item">Lock Screen</a>
+                                        </div>
+                                    </div> -->
+                                        <!-- <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-error"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Error <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-error">
+                                            <a href="error-404.html" class="dropdown-item">Error 404</a>
+                                            <a href="error-404-alt.html" class="dropdown-item">Error 404-alt</a>
+                                            <a href="error-500.html" class="dropdown-item">Error 500</a>
+                                        </div>
+                                    </div> -->
+                                        <a href="#" class="dropdown-item">Register Vendor with Skills</a>
+                                    </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <!-- <i class="ri-pages-line"></i> -->
+                                    Reports<div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-apps">
+                                    <div class="dropdown">
+                                        <!-- <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-auth"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Society Master <br> Creation<div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-auth">
+                                            <a href="auth-login.html" class="dropdown-item">Login</a>
+                                            <a href="auth-register.html" class="dropdown-item">Register</a>
+                                            <a href="auth-logout.html" class="dropdown-item">Logout</a>
+                                            <a href="auth-forgotpw.html" class="dropdown-item">Forgot Password</a>
+                                            <a href="auth-lock-screen.html" class="dropdown-item">Lock Screen</a>
+                                        </div>
+                                    </div> -->
+                                        <!-- <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-error"
+                                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Error <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-error">
+                                            <a href="error-404.html" class="dropdown-item">Error 404</a>
+                                            <a href="error-404-alt.html" class="dropdown-item">Error 404-alt</a>
+                                            <a href="error-500.html" class="dropdown-item">Error 500</a>
+                                        </div>
+                                    </div> -->
+                                        <a href="#" class="dropdown-item">Register Vehicle</a>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Horizontal Menu Ends. -->
+
+
+        <!-- Page Content -->
+        <div class="container">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Society Details</button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Wing
+                        Creation</button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Unit
+                        Creation</button>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <form action="" method="POST" style="background-color: #fff; padding-bottom: 20px;">
+
+                        <button onclick="myFunction()"
+                            style="margin-top: 10px; margin-left: 5px; padding: 10px 15px; font-weight: 600; border-radius: 6px; border: none; background: -webkit-linear-gradient(to right, #000428, #004e92); background: linear-gradient(to right,#000428, #004e92); color: #fff; margin-bottom: 5px;">Society
+                            Creation <span><i class="ri-arrow-right-double-line"></i></span></button>
+                        <div id="socCreation">
+                            <div class="row p-2">
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="fullname" class="form-label">Society Name <span
+                                                style="color: red;">*</span></label>
+                                        <input class="form-control" type="text" id="fullname"
+                                            placeholder="Enter Society's Name" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="administratorEmail" class="form-label">Administrator Email <span
+                                                style="color: red;">*</span></label>
+                                        <input class="form-control" type="email" id="administratorEmail"
+                                            placeholder="Enter Administrator Email" required="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="registraionNumber" class="form-label">Registration Number <span
+                                                style="color: red;">*</span></label>
+                                        <div class="input-group">
+                                            <div class="firstinp w-50">
+                                                <input class="form-control" type="text" id="gstNumber"
+                                                    placeholder="Enter Society's Registration Number" required="">
+                                            </div>
+                                            <div class="secinp w-50">
+                                                <label for="file-input" class=" d-flex">
+                                                    <div class="fileinp">
+                                                        <input id="uploadPDF" type="file" class="form-control"
+                                                            name="file" />&nbsp;
+                                                    </div>
+                                                    <div class="prev">
+                                                        <button type="button" class="form-control"
+                                                            onclick="PreviewImage()">
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                    <!-- <input class="form-control" type="number" id="registraionNumber"
+                                                placeholder="Enter Society's Registration Number" required="">
+                                                <label for="file-input" style="border: 1px solid grey; padding: 7px; background-color: #808080; color: #fff; cursor: pointer;">
+                                                    <i class="fa-solid fa-paperclip fa-xl"></i>
+                                                </label> -->
+
+
+                                                    <!-- <i class="fa-solid fa-eye"></i>
+                                                        <input type="button" class="form-control"  onclick="PreviewImage();" /> -->
+                                            </div>
+                                            <!-- <i class="fa-solid fa-paperclip fa-xl"></i>-->
+                                            </label>
+                                            <!-- <input id="file-input" type="file" style="display: none;"> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="altEmail" class="form-label">Alternate Email</label>
+                                        <input class="form-control" type="email" id="altEmail"
+                                            placeholder="Enter your Alternate Email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="panNumber" class="form-label">PAN Number</label>
+                                        <div class="input-group">
+                                            <div class="firstinp w-50">
+                                                <input class="form-control" type="text" id="panNumber"
+                                                    placeholder="Enter Society's PAN Number">
+                                            </div>
+                                            <div class="secinp w-50">
+                                                <label for="file-input" class=" d-flex">
+                                                    <div class="fileinp">
+                                                        <input id="uploadPDF1" type="file" class="form-control"
+                                                            name="file" />&nbsp;
+                                                    </div>
+                                                    <div class="prev">
+                                                        <button type="button" class="form-control"
+                                                            onclick="PreviewImage1()">
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                    <!-- <input class="form-control" type="number" id="registraionNumber"
+                                                placeholder="Enter Society's Registration Number" required="">
+                                                <label for="file-input" style="border: 1px solid grey; padding: 7px; background-color: #808080; color: #fff; cursor: pointer;">
+                                                    <i class="fa-solid fa-paperclip fa-xl"></i>
+                                                </label> -->
+
+
+                                                    <!-- <i class="fa-solid fa-eye"></i>
+                                                        <input type="button" class="form-control"  onclick="PreviewImage();" /> -->
+                                            </div>
+                                            <!-- <i class="fa-solid fa-paperclip fa-xl"></i>-->
+                                            </label>
+                                            <!-- <input id="file-input" type="file" style="display: none;"> -->
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="administratorNumber" class="form-label">Administrator Mobile Number
+                                            <span style="color: red;">*</span></label>
+                                        <input class="form-control" type="number" id="administratorNumber" required=""
+                                            placeholder="Enter Administrator Mobile Number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="gstNumber" class="form-label">GST Number</label>
+                                        <div class="input-group">
+                                            <div class="firstinp w-50">
+                                                <input class="form-control" type="text" id="panNumber"
+                                                    placeholder="Enter Society's PAN Number">
+                                            </div>
+                                            <div class="secinp w-50">
+                                                <label for="file-input" class=" d-flex">
+                                                    <div class="fileinp">
+                                                        <input id="uploadPDF2" type="file" class="form-control"
+                                                            name="file" />&nbsp;
+                                                    </div>
+                                                    <div class="prev">
+                                                        <button type="button" class="form-control"
+                                                            onclick="PreviewImage2()">
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                    <!-- <input class="form-control" type="number" id="registraionNumber"
+                                                placeholder="Enter Society's Registration Number" required="">
+                                                <label for="file-input" style="border: 1px solid grey; padding: 7px; background-color: #808080; color: #fff; cursor: pointer;">
+                                                    <i class="fa-solid fa-paperclip fa-xl"></i>
+                                                </label> -->
+
+
+                                                    <!-- <i class="fa-solid fa-eye"></i>
+                                                        <input type="button" class="form-control"  onclick="PreviewImage();" /> -->
+                                            </div>
+                                            <!-- <i class="fa-solid fa-paperclip fa-xl"></i>-->
+                                            </label>
+                                            <!-- <input id="file-input" type="file" style="display: none;"> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="alternateNumber" class="form-label">Alternate Mobile Number</label>
+                                        <input class="form-control" type="number" id="alternateNumber"
+                                            placeholder="Enter Alternate Mobile Number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-2">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <label for="address" class="form-label">Society's Registered Address <span
+                                                    style="color: red;">*</span></label>
+                                            <textarea name="address" id="" class="form-control" cols="30" rows="1"
+                                                required=""></textarea>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <label for="city" class="form-label">City <span
+                                                    style="color: red;">*</span></label>
+                                            <input type="text" class="form-control" id="city" required=""
+                                                placeholder="Enter your City">
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <label for="state" class="form-label">State <span
+                                                    style="color: red;">*</span></label>
+                                            <!-- <input type="text" class="form-control" id="state" required="" placeholder="Enter your State"> -->
+                                            <select name="state" id="state" class="form-control" required="">
+                                                <option value="#">Select your State</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                <option value="Assam">Assam</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                <option value="Goa">Goa</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                                <option value="Jharkhand">Jharkhand</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Kerala">Kerala</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Manipur">Manipur</option>
+                                                <option value="Meghalaya">Meghalaya</option>
+                                                <option value="Mizoram">Mizoram</option>
+                                                <option value="Nagaland">Nagaland</option>
+                                                <option value="Odisha">Odisha</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Sikkim">Sikkim</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Telangana">Telangana</option>
+                                                <option value="Tripura">Tripura</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="Uttarakhand">Uttarakhand</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                                <option value="Andaman and Nicobar ">Andaman and Nicobar </option>
+                                                <option value="Islands">Islands</option>
+                                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                                <option value="Daman and Diu">Daman and Diu</option>
+                                                <option value="Delhi">Delhi</option>
+                                                <option value="Ladakh">Ladakh</option>
+                                                <option value="Lakshadweep">Lakshadweep</option>
+                                                <option value="Puducherry">Puducherry</option>
+
+
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <label for="pinCode" class="form-label">Pin Code <span
+                                                    style="color: red;">*</span></label>
+                                            <input type="number" class="form-control" id="pinCode" required=""
+                                                placeholder="Enter your Pin Code">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-2">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <label for="address" class="form-label">Society's Correspondence
+                                                Address</label>
+                                            <textarea name="address" id="" class="form-control" cols="30"
+                                                rows="1"></textarea>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <label for="city" class="form-label">City</label>
+                                            <input type="text" class="form-control" id="city"
+                                                placeholder="Enter your City">
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <label for="state" class="form-label">State</label>
+                                            <select name="state" id="state" class="form-control">
+                                                <option value="#">Select your State</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                <option value="Assam">Assam</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                <option value="Goa">Goa</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                                <option value="Jharkhand">Jharkhand</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Kerala">Kerala</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Manipur">Manipur</option>
+                                                <option value="Meghalaya">Meghalaya</option>
+                                                <option value="Mizoram">Mizoram</option>
+                                                <option value="Nagaland">Nagaland</option>
+                                                <option value="Odisha">Odisha</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Sikkim">Sikkim</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Telangana">Telangana</option>
+                                                <option value="Tripura">Tripura</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="Uttarakhand">Uttarakhand</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                                <option value="Andaman and Nicobar ">Andaman and Nicobar </option>
+                                                <option value="Islands">Islands</option>
+                                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                                <option value="Daman and Diu">Daman and Diu</option>
+                                                <option value="Delhi">Delhi</option>
+                                                <option value="Ladakh">Ladakh</option>
+                                                <option value="Lakshadweep">Lakshadweep</option>
+                                                <option value="Puducherry">Puducherry</option>
+
+
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <label for="pinCode" class="form-label">Pin Code</label>
+                                            <input type="number" class="form-control" id="pinCode"
+                                                placeholder="Enter your Pin Code">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="ms-auto me-auto m-0 p-0" style="width: 98%;">
+
+                        <div class="head1 w-100 ps-1  pt-2 mt-2">
+                            <a href="javascript:void(0)" onclick="myFunction1()"
+                                style="padding: 10px 15px; font-weight: 600; border-radius: 6px; border: none; background: -webkit-linear-gradient(to right, #000428, #004e92); background: linear-gradient(to right,#000428, #004e92); color: #fff; margin-bottom: 10px; text-decoration: none !important;">Bank
+                                Details <span><i class="ri-arrow-right-double-line"></i></span></a>
+                        </div>
+                        <div id="bankDetails" style="display: none;">
+                            <div class="row p-2 mt-2">
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="beneficiaryName" class="form-label">Beneficiary Name</label>
+                                        <input class="form-control" type="text" id="beneficiaryName"
+                                            placeholder="Enter Beneficiary Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="beneficiaryCode" class="form-label">Beneficiary IFSC Code</label>
+                                        <input class="form-control" type="text" id="beneficiaryCode"
+                                            placeholder="Enter Beneficiary IFSC Code">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="beneficiaryAcNumber" class="form-label">Beneficiary Account
+                                            Number</label>
+                                        <input class="form-control" type="number" id="beneficiaryAcNumber"
+                                            placeholder="Enter Beneficiary Account Number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-2">
+                                        <label for="beneficiaryBank" class="form-label">Beneficiary Bank Name &
+                                            Branch</label>
+                                        <input class="form-control" type="text" id="beneficiaryBank"
+                                            placeholder="Enter Beneficiary Bank Name & Branch">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="ms-auto me-auto mt-2 m-0 p-0 mb-2" style="width: 98%;">
+
+                        <div class="head1 w-100 ps-1 pt-2">
+                            <a href="javascript:void(0)" onclick="myFunction2()"
+                                style="padding: 10px 15px; font-weight: 600; border-radius: 6px; border: none; background: -webkit-linear-gradient(to right, #000428, #004e92); background: linear-gradient(to right,#000428, #004e92); color: #fff; margin-bottom: 5px;">Other
+                                Documents <span><i class="ri-arrow-right-double-line"></i></span></a>
+                        </div>
+                        <div id="otherDocuments" style="display: none;">
+                            <div class="row p-2 mt-2">
+                                <div class="col-lg-4 mb-2">
+                                    <div class="mb-2 d-flex gap-2">
+                                        <label for="completionCertificate" class="form-label">Completion
+                                            Certificate</label>
+                                        <label class="filelabel">
+                                            <i class="fa fa-paperclip">
+                                            </i>
+                                            <span class="title">
+                                                Add File
+                                            </span>
+                                            <input class="FileUpload1" id="FileInput" name="completionCertificate"
+                                                type="file" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-2">
+                                    <div class="mb-2 d-flex gap-2">
+                                        <label for="occupancyCertificate" class="form-label">Occupancy
+                                            Certificate</label>
+                                        <label class="filelabel1">
+                                            <i class="fa fa-paperclip">
+                                            </i>
+                                            <span class="title">
+                                                Add File
+                                            </span>
+                                            <input class="FileUpload2" id="FileInput1" name="occupancyCertificate"
+                                                type="file" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-2">
+                                    <div class="mb-2 d-flex gap-2">
+                                        <label for="deedConvey" class="form-label">Deed of Conveyance</label>
+                                        <label class="filelabel2">
+                                            <i class="fa fa-paperclip">
+                                            </i>
+                                            <span class="title">
+                                                Add File
+                                            </span>
+                                            <input class="FileUpload3" id="FileInput2" name="deedConvey" type="file" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-2">
+                                    <div class="mb-2 d-flex gap-2">
+                                        <label for="societyLaws" class="form-label">Society Bye Laws</label>
+                                        <label class="filelabel3" style="margin-left: 35px;">
+                                            <i class="fa fa-paperclip">
+                                            </i>
+                                            <span class="title">
+                                                Add File
+                                            </span>
+                                            <input class="FileUpload4" id="FileInput3" name="societyLaws" type="file" />
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-2">
+                                    <div class="mb-2 d-flex gap-2">
+                                        <label for="otherDocuments" class="form-label">Other Documents</label>
+                                        <label class="filelabel4" style="margin-left: 26px;">
+                                            <i class="fa fa-paperclip">
+                                            </i>
+                                            <span class="title">
+                                                Add File
+                                            </span>
+                                            <input class="FileUpload5" id="FileInput4" name="otherDocuments"
+                                                type="file" />
+
+                                        </label>
+                                        <input type="text" placeholder="Specify your Document"
+                                            style="border: 1px solid lightgray; border-radius: 5px; padding-left: 10px;">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr class="ms-auto me-auto p-0 mt-2" style="width: 98%;">
+                        <input type="submit" value="Submit" id="societyCreation" class="btn btn-success  ms-2 mt-2">
+                    </form>
+
+                    <!-- <div class="ht" style="height: 50vh;"></div> -->
+                </div>
+                <div class="tab-pane fade show" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <form action="" id="wingcreaten" method="POST" class="pt-2 p-2"
+                        style="background-color: #fff;padding-bottom: 20px;">
+
+                        <div class="wing-info">
+                            <p>As a first Step to set up your Complex, create blocks of your Apartment Complex below
+                                .PLease Note: <br></p>
+                            <ul style="list-style: decimal;">
+                                <li>
+                                    Blocks are also referred as Towers / Buildings in some apartment Complexes.
+                                </li>
+                                <li>
+                                    Even incase your complex does not have blocks, you need to create atleast one block
+                                    (you can call the block "Flat").
+                                </li>
+                                <!-- <li>
+                                    In case you are configuring a gated community with individual plots/ row houses, etc. YOu can use Street Names as blocks. Alternately just create one block named "PLot".
+                                </li> -->
+                                <li>
+                                    Do note that each block name must be different and should be less than 30 characters
+                                    in length.
+                                </li>
+                                <li>
+                                    If you have multiple wings in each tower - create one block per tower-wing
+                                    combination. For example. Tower 1 - A wing, Tower 1 - B wing, etc...
+                                </li>
+                                <li>
+                                    You can always add more blocks here.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="create-wing">
+                            <label for="inputCount" class="form-label">Enter the Number of Blocks you want to
+                                Create</label> &nbsp;
+                            <div class="input-group w-25">
+                                <input type="number" class="form-control w-50" id="inputCount"
+                                    style="border: 1px solid lightgray;" placeholder="">
+                                <button id="createInputs" class="btn btn-primary">Create Wings</button>
+                            </div>
+                        </div>
+
+                        <div id="inputContainers"></div><br>
+                        <input type="submit" class="m-2 btn btn-success" id="wingCreation" value="Save">
+                    </form>
+
+                    <script>
+                        document.getElementById("createInputs").addEventListener("click", function (e) {
+                            e.preventDefault()
+                            const inputCount = parseInt(document.getElementById("inputCount").value);
+
+                            if (!isNaN(inputCount) && inputCount > 0) {
+                                const inputContainers = document.getElementById("inputContainers");
+
+                                // Create a new container for this set of input fields
+                                const inputContainer = document.createElement("div");
+                                inputContainers.appendChild(inputContainer);
+
+                                for (let i = 0; i < inputCount; i++) {
+                                    const input = document.createElement("input");
+                                    input.type = "text";
+                                    input.className = "form-control w-50";
+                                    input.placeholder = `Wing ${i + 1}`;
+                                    inputContainer.appendChild(input);
+                                }
+                            } else {
+                                Swal.fire({
+                                    position: "top-center",
+                                    icon: "error",
+                                    title: "Please Enter a Valid Number",
+                                    showConfirmButton: false,
+                                    timer: 1600
+                                });
+                            }
+
+                            //     const textareaContainer = document.getElementById("textareaContainer");
+                            //     const newTextArea = document.createElement("div");
+                            //     textareaContainer.appendChild(newTextArea);
+
+
+                            //     for (let i = 0; i < inputCount; i++) {
+                            //     const textarea = document.createElement("textarea");
+                            //     textarea.placeholder = `Wing ${i + 1}`;
+                            //     textarea.name = "textarea" + (i + 1); // Optional: Give each textarea a unique name
+                            //     textareaContainer.appendChild(textarea);
+                            //    }
+                        });
+                    </script>
+                </div>
+                <div class="tab-pane fade show" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <form action="" method="POST" class="pt-2 p-2" style="background-color: #fff;padding-bottom: 20px;">
+                        <div class="unit-info">
+                            <p>As next steps, please enter the unit numbers that you would like to add for each block.
+                            </p>
+                            <p>Please not:</p>
+                            <ul style="list-style: decimal;">
+                                <li>
+                                    Units are also referred as flats, apartments, villas, plots, etc...
+                                </li>
+                                <li>
+                                    Separate the unit numbers by commas or enter unit numbers on separate lines.
+                                </li>
+                                <li>
+                                    Do note that each unit number must be different and cannot be more than 6
+                                    characters.
+                                </li>
+                                <li>
+                                    You can add all units present in each block in a single step below. If you do not
+                                    have all details, you can always add more units later.
+                                </li>
+                                <li>
+                                    You will not be able to edit the unit number once created. If you want some unit
+                                    number changed, please send a mail to support@zit.com
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <p>flats in A wing</p> -->
+                        <div id="textareaContainer">
+                            <label class="form-label p-0 ms-2" for="flatNumbers">Units in Block/Street</label><br>
+                            <textarea name="flatNumbers" class="m-0 p-0" id="" cols="70" rows="5"></textarea><br>
+                            <small class="form-label">For example enter 001, 002, 003, 004, 101, 102, 103, 104 to create
+                                8 units</small>
+                        </div>
+                        <input type="submit" value="Submit" class="btn btn-success mt-2" id="unitCreation" name=""
+                            id="">
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- Daterangepicker js -->
+        <script src="assets/vendor/daterangepicker/moment.min.js"></script>
+        <script src="assets/vendor/daterangepicker/daterangepicker.js"></script>
+
+        <!-- Apex Charts js -->
+        <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+
+        <!-- Vector Map js -->
+        <script src="assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+
+        <!-- Dashboard App js -->
+        <script src="assets/js/pages/dashboard.js"></script>
+
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+
+        <script src="assets/js/society-creation.js"></script>
+
+        <!-- Font Awesome -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+            integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- wing creation jquery -->
+        <!-- <script src="//code.jquery.com/jquery-2.1.1.min.js"></script> -->
+
+        <!-- Member-Master js file -->
+        <script src="./assets/js/member-master.js"></script>
+
+        <!-- Sweet Alert js file -->
+        <script src="./assets/js/Sweet-Alert.js"></script>
+</body>
+
+</html>

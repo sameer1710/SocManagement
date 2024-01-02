@@ -1,0 +1,340 @@
+@import url('https://fonts.cdnfonts.com/css/nexa-script');
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    appearance: none; 
+}
+
+/* Password Show / Hide */
+.field-icon {
+  float: right !important;
+  margin-right: 8px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+
+}
+
+/* Other Documents - File Input */
+.filelabel {
+  width: 120px;
+  border: 2px dashed grey;
+  border-radius: 5px;
+  display: block;
+  padding: 5px;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+}
+.filelabel i {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+.filelabel i,
+.filelabel .title {
+color: grey;
+transition: 200ms color;
+}
+.filelabel:hover {
+border: 2px solid #1665c4;
+}
+.filelabel:hover i,
+.filelabel:hover .title {
+color: #1665c4;
+}
+#FileInput{
+  display:none;
+}
+
+
+/* Occupancy Certificate */
+.filelabel1 {
+  width: 120px;
+  border: 2px dashed grey;
+  border-radius: 5px;
+  display: block;
+  padding: 5px;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+}
+.filelabel1 i {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+.filelabel1 i,
+.filelabel1 .title {
+color: grey;
+transition: 200ms color;
+}
+.filelabel1:hover {
+border: 2px solid #1665c4;
+}
+.filelabel1:hover i,
+.filelabel1:hover .title {
+color: #1665c4;
+}
+#FileInput1{
+  display:none;
+}
+
+
+/* Deed of Conveyance */
+.filelabel2 {
+  width: 120px;
+  border: 2px dashed grey;
+  border-radius: 5px;
+  display: block;
+  padding: 5px;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+}
+.filelabel2 i {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+.filelabel2 i,
+.filelabel2 .title {
+color: grey;
+transition: 200ms color;
+}
+.filelabel2:hover {
+border: 2px solid #1665c4;
+}
+.filelabel2:hover i,
+.filelabel2:hover .title {
+color: #1665c4;
+}
+#FileInput2{
+  display:none;
+}
+
+
+/* Society Bye Laws */
+.filelabel3 {
+  width: 120px;
+  border: 2px dashed grey;
+  border-radius: 5px;
+  display: block;
+  padding: 5px;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+}
+.filelabel3 i {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+.filelabel3 i,
+.filelabel3 .title {
+color: grey;
+transition: 200ms color;
+}
+.filelabel3:hover {
+border: 2px solid #1665c4;
+}
+.filelabel3:hover i,
+.filelabel3:hover .title {
+color: #1665c4;
+}
+#FileInput3{
+  display:none;
+}
+
+
+
+/* Other Documents */
+.filelabel4 {
+  width: 120px;
+  border: 2px dashed grey;
+  border-radius: 5px;
+  display: block;
+  padding: 5px;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+}
+.filelabel4 i {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+.filelabel4 i,
+.filelabel4 .title {
+color: grey;
+transition: 200ms color;
+}
+.filelabel4:hover {
+border: 2px solid #1665c4;
+}
+.filelabel4:hover i,
+.filelabel4:hover .title {
+color: #1665c4;
+}
+#FileInput4{
+  display:none;
+}
+
+/* Submit Button  */
+.cutomSubmit{
+  border: none;
+  padding: 8px 40px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  background: -webkit-linear-gradient(to right, #00b4db, #0083b0);
+  background: linear-gradient(to right, #00b4db, #0083b0);
+}
+.cutomSubmit:hover{
+  background: none !important;
+  border: 1px solid #0083b0;
+  font-weight: 600;
+  color: #0083b0;
+}
+
+
+#inputContainers input{
+  margin: 10px;
+  
+}
+
+#textareaContainer textarea{
+  margin: 10px;
+  
+}
+
+.hiddens{
+  display: none;
+}
+
+input[type="radio"]:checked {
+  /* width: 20px;
+  height: 20px; */
+  background-color: #1665c4 !important;
+  /* accent-color: blueviolet !important; */
+  /* border: 2px solid #bcbcbc !important; */
+}
+
+
+.expchrge:hover{
+  background-color: #A0C49D !important;
+}
+
+.asset-card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(89, 89, 89, 0.19);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+
+hr.style-one {
+  border: 0;
+  height: 1px;
+  width: 99%;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+hr.style-two {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+hr.style-three {
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+  }
+  hr.style-three:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+hr.type_3 {
+  
+  border: 0;
+  height: 25px;
+  background-position: center center;
+  background-image: url("../images/type_3.png");
+  background-repeat: no-repeat;
+}
+
+/* div.style-five {
+  height: 75px;
+  background: #fff url("../images/style-five.png") no-repeat scroll left;
+  background-size: 80px 75px;
+  margin-left: -40px;
+  }
+  hr.style-five
+  {
+  width: 95%;
+  margin-top: -40px;
+  border: 0;
+  border-bottom: 1px dashed black;
+  background: #70A8FF;
+} */
+
+/* hr.style-six {
+  padding: 0;
+  border: none;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  color: #333;
+  text-align: center;
+}
+hr.style-six:after {
+  content:" ";
+  display: inline-block;
+  position: relative;
+  top: -2.1em;
+  font-size: 1.5em;
+  padding: 19px 1.75em;
+  background:  url("../images/mickey-mouse.png") no-repeat scroll center;
+  background-size: 90px 90px;
+  height: 50px;
+} */
+
+
+
+.item-container {
+  display: inline-flex !important;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.receipt-container {
+  display: inline-flex !important;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.list-group-item:hover{
+  background-color: var(--tz-purple-bg-subtle);
+}

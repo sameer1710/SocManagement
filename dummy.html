@@ -1,0 +1,136 @@
+<div id="fixedCharge">
+    <!-- <div class="create mb-2 mt-2">
+        <button class="btn btn-primary" onclick="showForm()">Create</button>
+    </div>
+
+    <script>
+        function showForm() {
+            var create = document.getElementById("createForm");
+            if(create.style.display == "none") {
+                create.style.display = "block";
+            }else {
+                create.style.display = "none";
+            }
+        }
+    </script> -->
+    <div id="fixedContainer">
+        <div class="fixContainer">
+            <div class="row mt-2" id="createForm">
+                <div class="col-lg-4 mb-2">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-lg-4" style="display: flex; justify-content: center;">
+                    <label for="" class="w-50">
+                        <input type="radio" name="options" value="area"
+                    >&nbsp;Area
+                    </label>
+
+                    <label for="">
+                        <input type="radio" name="options" value="fixed"
+                        >&nbsp;Fixed
+                    </label>
+                </div>
+                <div class="col-lg-4">
+                    <div class="div1" style="display: none;">
+                        <div class="row" style="display: flex; align-items: center;">
+                            <div class="col-lg-6">
+                                <label for="" class="form-label">Per Sqft Rate</label>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" name="" id=""  class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="div2" style="display: none;">
+                        <div class="row" style="display: flex; align-items: center;">
+                            <div class="col-lg-6">
+                                <label for="" class="form-label">Monthly Fixed Rate</label>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" name="" id="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <script>
+                        
+                        // function toggleDivs() {
+                        //     var radioButtons = document.getElementsByName('toggle');
+                        //     var div1 = document.getElementById('duplicater');
+                        //     var div2 = document.getElementById('fixed');
+                            
+                        //     for (var i = 0; i < radioButtons.length; i++) {
+                        //         if (radioButtons[i].checked) {
+                        //             if (radioButtons[i].value === '0') {
+                        //                 div1.style.display = 'block';
+                        //                 div2.style.display = 'none';
+                        //             } else if (radioButtons[i].value === '1') {
+                        //                 div1.style.display = 'none';
+                        //                 div2.style.display = 'block';
+                        //             }
+                        //         }
+                        //     }
+                        // }
+                    </script> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<button type="button" class="btn btn-soft-primary" id="addMore">Add More</button>
+<hr class="ms-auto me-auto m-0 p-0 mt-2 mb-2" style="width: 99%;">
+<script>
+    // var i =0;
+    // function duplicateAb() {
+    //     // Clone the first form
+    //     var orgFixed = document.querySelector('.fix-container');
+    //     var area = document.getElementById("duplicater"+i)
+    //     var fix = document.getElementById("fixed"+i)
+    //     var clonedFixed = orgFixed.cloneNode(true);
+    //     // for(i<=10; i++;){
+    //     area.id = "duplicater" + ++i;
+    //     fix.id = "fixed" + ++i;
+    //     console.log(area,fix)
+    //     // }
+
+    //     // Append the cloned form to the forms container
+    //     document.getElementById('fixed-container').appendChild(clonedFixed);
+    // }
+
+
+    // <script>
+            function setupEventListeners(container) {
+            const radioButtons = container.querySelectorAll('input[type="radio"][name="toggle"]');
+            radioButtons.forEach(function(radio)
+    {
+                radio.addEventListener('change', function() {
+                const div1 = container.querySelector('.div1');
+                const div2 = container.querySelector('.div2');
+                
+                if (this.value === 'area') {
+                    div1.style.display = 'block';
+                    div2.style.display = 'none';
+                } else if (this.value === 'fixed') {
+                    div1.style.display = 'none';
+                    div2.style.display = 'block';
+                }
+                });
+            });
+            }
+        
+            document.getElementById('addMore').addEventListener('click', function() {
+            const containerToClone = document.querySelector('.fixContainer');
+            const clone = containerToClone.cloneNode(true);
+            // document.body.appendChild(clone);
+            document.getElementById('fixedContainer').appendChild(clone);
+            setupEventListeners(clone);
+            });
+        
+            setupEventListeners(document.querySelector('.fixContainer'));
+        </script>
+
+<!-- </script> -->

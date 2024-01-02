@@ -1,0 +1,1004 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Tab Panel with Previous and Next Buttons</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const tabItems = document.querySelectorAll('.nav-link');
+    
+    // Previous button functionality
+    prevBtn.addEventListener('click', function() {
+      const activeTab = document.querySelector('.tab-pane.active');
+      const tabs = document.querySelectorAll('.tab-pane');
+      let index = Array.from(tabs).indexOf(activeTab);
+      if (index > 0) {
+        tabs[index].classList.remove('active', 'show');
+        tabs[index - 1].classList.add('active', 'show');
+        tabItems[index].classList.remove('active');
+        tabItems[index - 1].classList.add('active');
+      }
+    });
+    
+    // Next button functionality
+    nextBtn.addEventListener('click', function() {
+      const activeTab = document.querySelector('.tab-pane.active');
+      const tabs = document.querySelectorAll('.tab-pane');
+      let index = Array.from(tabs).indexOf(activeTab);
+      if (index < tabs.length - 1) {
+        tabs[index].classList.remove('active', 'show');
+        tabs[index + 1].classList.add('active', 'show');
+        tabItems[index].classList.remove('active');
+        tabItems[index + 1].classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
+
+
+////////////////////////////////////////////////////////////////
+     <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="member-details-tab" data-bs-toggle="tab" data-bs-target="#member-details" type="button" role="tab" aria-controls="member-details" aria-selected="true">Member Details</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="shares-details-tab" data-bs-toggle="tab" data-bs-target="#shares-details" type="button" role="tab" aria-controls="shares-details" aria-selected="false">Shares Details</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="loan-details-tab" data-bs-toggle="tab" data-bs-target="#loan-details" type="button" role="tab" aria-controls="loan-details" aria-selected="false">Home Loan Details</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="staff-details-tab" data-bs-toggle="tab" data-bs-target="#staff-details" type="button" role="tab" aria-controls="staff-details" aria-selected="false">Staff Details</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="gst-details-tab" data-bs-toggle="tab" data-bs-target="#gst-details" type="button" role="tab" aria-controls="gst-details" aria-selected="false">GST Details</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="vehicle-details-tab" data-bs-toggle="tab" data-bs-target="#vehicle-details" type="button" role="tab" aria-controls="vehicle-details" aria-selected="false">Vehicle Details</button>
+                </li>
+            </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="member-details" role="tabpanel" aria-labelledby="member-details-tab" tabindex="0">
+                    <form action="">
+                        <div id="forms-container">
+                            <div class="form-container">
+                                
+                                <div class="row">
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Member's Name</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Nominee Name</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Ownership %</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Date of Nomination</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="date" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Position</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <select name="" class="form-control" id="">
+                                                        <option value="associate member">Associate Member</option>
+                                                        <option value="chairman">Chairman</option>
+                                                        <option value="secretary">Secretary</option>
+                                                        <option value="treasurer">Treasurer</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Relation with Nominator</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Occupation</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Sharein %</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Member DOB</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="date" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Nominee DOB</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="date" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Member PAN</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Nominee PAN</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Member Aadhar</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Nominee Aadhar</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Member Permanent Address</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <textarea name="" id="" cols="30" rows="1" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Nominee Permanent Address</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <textarea name="" id="" cols="30" rows="1" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">PIN</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="number" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">PIN</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="number" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">State</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">State</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="number" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Member Email</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="email" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Nominee Email</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="email" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Member Phone</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="number" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Nominee Phone</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="number" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Emergency Contact Number</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="number" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-2">
+                                            <div class="row" style="display: flex; align-items: center;">
+                                                <div class="col-lg-6">
+                                                    <label for="" class="form-label">Emergency Contact Number</label>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="number" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <hr class="ms-auto me-auto m-0 p-0 mt-2 mb-2" style="width: 99%;">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <button onclick="duplicateForm()" class="btn btn-primary mt-2">Add Members</button>
+                    <script>
+                        function duplicateForm() {
+                            // Clone the first form
+                            var originalForm = document.querySelector('.form-container');
+                            var clonedForm = originalForm.cloneNode(true);
+
+                            // Clear input values in the cloned form (optional)
+                            var inputs = clonedForm.querySelectorAll('input');
+                            inputs.forEach(function(input) {
+                                input.value = '';
+                            });
+
+                            // Append the cloned form to the forms container
+                            document.getElementById('forms-container').appendChild(clonedForm);
+                        }
+                    </script>
+                </div>
+
+                <div class="tab-pane fade" id="shares-details" role="tabpanel" aria-labelledby="shares-details-tab" tabindex="0">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Folio Number</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Share Issue Date</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Application Number</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Serial No of Certificate</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Allotment Number</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Share No From</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Total Amount Received</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Share No To</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Amount Received On</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Share Transfer Date</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" value="Submmit" class="btn btn-success">
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="loan-details" role="tabpanel" aria-labelledby="loan-details-tab" tabindex="0">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Hypothication Bank Name</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Object of Loan</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Loan Issue Date</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Loan Value</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Account Number</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Installment</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">1<sup>st</sup> Security</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Due Date</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">2<sup>nd</sup> Security</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Remarks</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <textarea name="" id="" cols="30" rows="1" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-success" value="Submit">
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="staff-details" role="tabpanel" aria-labelledby="staff-details-tab" tabindex="0">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6 mb-2">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Name</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-lg-6 mb-2">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Start Date</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Role</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">End Date</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Contact Number</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-lg-6 mb-2">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <select name="" id="" class="form-control">
+                                            <option value="kyc">KYC</option>
+                                            <option value="aadhar">Aadhar Card</option>
+                                            <option value="pan">Pan Card</option>
+                                            <option value="voter">Voter ID</option>
+                                            <option value="passport">Passport</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6 mb-2">
+                                        <label for="" class="form-label">KYC</label>
+                                    </div>
+                                    <div class="col-lg-6 mb-2">
+                                        <div class="input-group">
+                                            <input type="number" id="kycCount" class="form-control">
+                                            <button id="createKYC" class="btn btn-primary">Attach FIles</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div id="kycContainers">
+
+                                </div>
+                                <script>
+                                    document.getElementById("createKYC").addEventListener("click", function (e) {
+                                    e.preventDefault()
+                                    const kycCount = parseInt(document.getElementById("kycCount").value);
+                            
+                                    if (!isNaN(kycCount) && kycCount > 0) {
+                                        const kycContainers = document.getElementById("kycContainers");
+                            
+                                        // Create a new container for this set of input fields
+                                        const inputContainer = document.createElement("div");
+                                        kycContainers.appendChild(inputContainer); 
+                                        
+                                        
+
+                                        for (var i = 0; i < kycCount; i++) {
+                                        var labelInput = document.createElement("label");
+                                        labelInput.textContent = "Attachment " + (i + 1);
+                                        labelInput.className = "form-label";
+                                        inputContainer.appendChild(labelInput);
+
+                                        var inputField = document.createElement("input");
+                                        inputField.type = "text";
+                                        inputField.className = "form-control mb-1";
+                                        inputField.name = "field" + (i + 1);
+                                        inputContainer.appendChild(inputField);
+
+                                        // var labelAttachment = document.createElement("label");
+                                        // labelAttachment.textContent = "Attachment " + (i + 1);
+                                        // inputContainer.appendChild(labelAttachment);
+
+                                        var attachmentField = document.createElement("input");
+                                        attachmentField.type = "file";
+                                        attachmentField.id = "showFile" + (i + 1);
+                                        attachmentField.className = "form-control";
+                                        attachmentField.name = "attachment" + (i + 1);
+                                        inputContainer.appendChild(attachmentField);
+
+                                        //Preview Button
+                                        // var attachButton = document.createElement("button");
+                                        // attachButton.innerHTML = '<i class="fa-solid fa-eye"></i>';
+                                        // attachButton.addEventListener("click",function() {
+                                        //     viewFIle(attachmentField);
+                                        // });
+                                        // inputContainer.appendChild(attachButton);
+
+                                        // Add a line break for better spacing
+                                        inputContainer.appendChild(document.createElement("br"));
+                                        }
+                                    }
+                                    
+                                    });
+
+                                    function viewFile(attachmentField) {
+                                        var fileInput = attachmentField;
+                                        var file = fileInput.files[0];
+
+                                        if (file) {
+                                            var reader = new FileReader();
+
+                                            reader.onload = function(e) {
+                                            var previewContainer = document.createElement("div");
+
+                                            var previewLabel = document.createElement("p");
+                                            previewLabel.textContent = "Preview:";
+                                            previewContainer.appendChild(previewLabel);
+
+                                            var previewImage = document.createElement("img");
+                                            previewImage.src = e.target.result;
+                                            previewImage.style.maxWidth = "100%";
+                                            previewContainer.appendChild(previewImage);
+
+                                            document.body.appendChild(previewContainer);
+                                            };
+
+                                            reader.readAsDataURL(file);
+                                        } else {
+                                            alert("No file selected.");
+                                        }
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-success" value="Submit">
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="gst-details" role="tabpanel" aria-labelledby="gst-details-tab" tabindex="0">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">GSTN</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Billing State</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Billing Name</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Billing Address</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <textarea name="" id="" cols="30" rows="1" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Contact Number</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="number" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-success" value="Submit">
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="vehicle-details" role="tabpanel" aria-labelledby="vehicle-details-tab" tabindex="0">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Parking Lot</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Brand & Model</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Vehicle Type</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">RC Copy</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="file" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Vehicle Number</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-2">
+                                <div class="row" style="display: flex; align-items: center;">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label">Sticker Issued</label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-success" value="Submit">
+                    </form>
+                </div>
+
+                
+              </div>
+
+              <div class="mt-3">
+                <button class="btn btn-primary" id="prevBtn">Previous</button>
+                <button class="btn btn-primary ms-2" id="nextBtn">Next</button>
+              </div>
+
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  const prevBtn = document.getElementById('prevBtn');
+                  const nextBtn = document.getElementById('nextBtn');
+                  const tabItems = document.querySelectorAll('.nav-link');
+                  
+                  // Previous button functionality
+                  prevBtn.addEventListener('click', function() {
+                    const activeTab = document.querySelector('.tab-pane.active');
+                    const tabs = document.querySelectorAll('.tab-pane');
+                    let index = Array.from(tabs).indexOf(activeTab);
+                    if (index > 0) {
+                      tabs[index].classList.remove('active', 'show');
+                      tabs[index - 1].classList.add('active', 'show');
+                      tabItems[index].classList.remove('active');
+                      tabItems[index - 1].classList.add('active');
+                    }
+                  });
+                  
+                  // Next button functionality
+                  nextBtn.addEventListener('click', function() {
+                    const activeTab = document.querySelector('.tab-pane.active');
+                    const tabs = document.querySelectorAll('.tab-pane');
+                    let index = Array.from(tabs).indexOf(activeTab);
+                    if (index < tabs.length - 1) {
+                      tabs[index].classList.remove('active', 'show');
+                      tabs[index + 1].classList.add('active', 'show');
+                      tabItems[index].classList.remove('active');
+                      tabItems[index + 1].classList.add('active');
+                    }
+                  });
+                });
+              </script>

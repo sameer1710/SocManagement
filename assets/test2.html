@@ -1,0 +1,224 @@
+<html>
+  <head>
+    <style>
+      /* Add some basic styling for demonstration purposes */
+      .item-container {
+          display: inline-flex; /* Display on the same line */
+          align-items: center;
+          vertical-align: top; /* Align to the top of the line */
+          margin-right: 10px; /* Adjust margin for spacing */
+      }
+
+      label {
+          margin-right: 5px; /* Adjust margin for spacing */
+      }
+
+       input {
+          display: block; /* Ensure each input appears on a new line */
+      }
+  </style>
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- <form action="">
+      Name
+      <input type="text" id = "name">
+      <br>
+      Age
+      <input type="number" id = "age">
+      <br>
+      <button type="button" id="insert">Insert</button>
+    </form>
+
+    <script>
+      $('#insert').click(function(){
+        Swal.fire({
+          icon: 'success',
+          title: 'Inserted Successfully',
+          html:
+          'Name : ' + $('#name').val() + '<br>' +
+          'Age : ' + $('#age').val()
+        })
+      })
+    </script> -->
+
+    <!-- <div class='row'>
+      <div class="col-md-6"> 
+        This will be the left side
+        <div class="row"> First Row</div>
+        <div class="row"> Third Row</div>
+        <div class="row"> Fourth Row</div>
+      </div>
+      <div class="col-md-6"> 
+        This will be the right side
+      </div>
+    </div> -->
+
+    <!-- <table id="myTable">
+      <tr id="cloneRow">
+          <td><input type="text" class="form-control"></td>
+          <td><input type="text" class="form-control"></td>
+          <td><input type="number" class="form-control"></td>
+          <td><input type="number" class="form-control"></td>
+          <td><input type="number" class="form-control"></td>
+        </tr>
+      </table>
+      <td><button onclick="cloneRow()">Clone Row</button></td>
+  
+  <script>
+      function cloneRow() {
+          const rowToClone = document.getElementById('cloneRow');
+          const clonedRow = rowToClone.cloneNode(true);
+  
+          // Set a unique id for the cloned row
+          clonedRow.id = "clonedRow_" + Date.now();
+  
+          // Clone classes of input elements
+          rowToClone.querySelectorAll('input').forEach((input, index) => {
+              clonedRow.querySelectorAll('input')[index].className = input.className;
+          });
+  
+          document.getElementById('myTable').appendChild(clonedRow);
+      }
+  </script> -->
+
+
+  
+    
+
+
+<ul id="target_ul" style="list-style: none;">
+    <li>001 - 2000</li>
+    <li>002 - 3000</li>
+    <li>003 - 4000</li>
+    <li>004 - 1000</li>
+    <li>005 - 3000</li>
+</ul>
+
+<script>
+    window.onload = function () {
+        var lis = document.getElementById('target_ul').getElementsByTagName('li');
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onclick = breakUps;
+        }
+    }
+
+    function breakUps() {
+        // Check if a container already exists
+        if (this.nextElementSibling && this.nextElementSibling.classList.contains('item-container')) {
+            return; // If yes, do nothing
+        }
+
+        // Get the entire content of the clicked list item as label text
+        var labelText = this.textContent.trim();
+
+        // Create a container for the label and input
+        var container = document.createElement('div');
+        container.classList.add('item-container');
+
+        // Create a new label element
+        var label = document.createElement('label');
+        label.textContent = labelText;
+
+        // Create a new input element
+        var input = document.createElement('input');
+        input.type = 'text';
+
+        // Append the label and input to the container
+        // container.appendChild(label);
+        container.appendChild(input);
+
+        // Insert the container after the clicked list item
+        this.insertAdjacentElement('afterend', container);
+    }
+</script>
+
+
+  
+  
+  </body>
+</html>
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+                                        <div class="d-flex w-100 align-items-center gap-2">
+                                            <label for="" class="form-label">Total Amount to be Allocated</label>
+                                            <input type="number" name="" id="" class="form-control w-50">
+                                        </div>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                            
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="select-type w-50 ms-auto me-auto text-center">
+                                            <label for="types" class="form-label">Type of Payment</label>
+                                            <select name="types" class="form-control" id="selectPayment" onchange="toggleOptions()">
+                                                <option value="" selected>Select the type of Payment</option>
+                                                <option value="against-invoice">Against Invoice</option>
+                                                <option value="on-account">On Account</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="Invoice-payment mt-3" id="invoicePayment" style="display: none;">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <p class="form-label text-center fs-5 fw-bold">The below are the Voucher Number and Amount list to be Paid</p>
+                                                    <ul id="target_ul" style="list-style: none;">
+                                                        <div class="d-flex">
+                                                            <li style="cursor: pointer; padding: 10px 0px;">001 - 2000
+                                                            </li>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <li style="cursor: pointer; padding: 10px 0px;">002 - 3000
+                                                            </li>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <li style="cursor: pointer; padding: 10px 0px;">003 - 4000
+                                                            </li>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <li style="cursor: pointer; padding: 10px 0px;">004 - 1000
+                                                            </li>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <li style="cursor: pointer; padding: 10px 0px;">005 - 3000
+                                                            </li>
+                                                        </div>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="on-account" id="onAccount" style="display: none;">
+                                            <div class="row">
+                                                <div class="col-lg-6 mt-5">
+                                                    <label for="" class="form-label">Voucher Number:</label>
+                                                    <input type="text" name="" id="" class="form-control">
+                                                </div>
+
+                                                <div class="col-lg-6 mt-5">
+                                                    <label for="" class="form-label">Payment:</label>
+                                                    <input type="text" name="" id="" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>

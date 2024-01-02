@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Form</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    /* max-width: 800px; */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <h1>User Form</h1>
+    <form id="userForm">
+      <div class="row">
+        <div class="col-lg-6 mb-2">
+          <div class="row">
+            <div class="col-lg-6">
+              <label for="name" class="form-label">Name:</label>
+            </div>
+            <div class="col-lg-6">
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-2">
+          <div class="row">
+            <div class="col-lg-6">
+              <label for="email" class="form-label">Email:</label>
+            </div>
+            <div class="col-lg-6">
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-2">
+          <div class="row">
+            <div class="col-lg-6">
+              <label for="age" class="form-label">Age:</label>
+            </div>
+            <div class="col-lg-6">
+              <input type="number" id="age" name="age" class="form-control" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-2">
+          <div class="row">
+            <div class="col-lg-6">
+              <label for="city" class="form-label">City:</label>
+            </div>
+            <div class="col-lg-6">
+              <input type="text" id="city" name="city" class="form-control" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+    </form>
+
+    <h2>User Data</h2>
+    <button type="button" class="btn btn-danger mb-2" onclick="clearTable()">Clear Table</button>
+    <table id="userData" class="table table-bordered table-responsive table-striped">
+      <thead>
+        <tr>
+          <th style="background-color: cadetblue;">#</th>
+          <th style="background-color: cadetblue;">Name</th>
+          <th style="background-color: cadetblue;">Email</th>
+          <th style="background-color: cadetblue;">Age</th>
+          <th style="background-color: cadetblue;">City</th>
+          <th style="background-color: cadetblue;">Action</th>
+        </tr>
+      </thead>
+      <tbody id="userDataBody">
+        <!-- User data will be displayed here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    let userData = [];
+    let editingIndex = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Load existing user data from local storage
+      const storedData = localStorage.getItem('userData');
+      if (storedData) {
+        userData = JSON.parse(storedData);
+        updateTable();
+      }
+    });
+
+    
+
+    function updateTable() {
+      const tableBody = document.getElementById('userDataBody');
+      tableBody.innerHTML = '';
+
+      userData.forEach((user, index) => {
+        const row = `<tr><td>${index + 1}</td><td>${user.name}</td><td>${user.email}</td><td>${user.age}</td><td>${user.city}</td><td><button type="button" style="border:none; background: transparent;" onclick="editUser(${index})"><i class="fa-solid fa-pen-to-square"></i></button></td></tr>`;
+        tableBody.innerHTML += row;
+      });
+    }
+
+
+
+    function editUser(index) {
+      const user = userData[index];
+
+      // Fill the form with user's data
+      document.getElementById('name').value = user.name;
+      document.getElementById('email').value = user.email;
+      document.getElementById('age').value = user.age;
+      document.getElementById('city').value = user.city;
+
+      // Remove the edited user from the userData array
+      // userData.splice(index, 1);
+
+
+
+      // Update the table
+      // updateTable(); 
+
+      editingIndex = index;
+
+    }
+
+    function submitForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const age = document.getElementById('age').value;
+      const city = document.getElementById('city').value;
+
+      const user = {
+        name: name,
+        email: email,
+        age: age,
+        city: city
+      };
+
+      if (editingIndex !== null) {
+      // If editing, update the original row
+      userData[editingIndex] = user;
+      // editingIndex = null; // Reset editingIndex
+    } else {
+      // If not editing, add a new row
+      userData.push(user);
+    }
+
+      // userData.push(user);
+      updateTable();
+      saveToLocalStorage();
+      clearForm();
+    }
+
+
+    
+
+    function saveToLocalStorage() {
+      const jsonData = JSON.stringify(userData);
+      localStorage.setItem('userData', jsonData);
+    }
+
+    function clearForm() {
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('age').value = '';
+      document.getElementById('city').value = '';
+    }
+
+    function clearTable() {
+      userData = [];
+      updateTable();
+      localStorage.removeItem('userData');
+    }
+
+  </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</html>
